@@ -8,7 +8,7 @@ const PartOfSpeech = ({ partOfSpeech, definitions, synonyms, antonyms }) => (
       <div className="" />
     </section>
     <p className="text-gray-500 dark:text-gray-400">Meaning</p>
-    <ul>
+    <ul className="list-disc text-purple-600 ps-4">
       {definitions.map(({ definition, example }, index) => (
         <li key={`${partOfSpeech}-${index}`} className="py-1">
           <p className="text-gray-800 dark:text-gray-200 py-0 my-0">
@@ -49,6 +49,7 @@ const WordDefinition = ({
   sourceUrls,
 }) => {
   const audio = getAudio({ phonetics });
+
   return (
     <section>
       <section className="flex justify-between py-4">

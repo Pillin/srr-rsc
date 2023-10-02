@@ -21,6 +21,7 @@ const Input = ({ initialValue }) => {
     if (input === "") {
       return setError(true);
     }
+    router.refresh();
     router.push(`/?search=${input}`, { scroll: true });
   };
 

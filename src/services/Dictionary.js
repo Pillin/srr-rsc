@@ -1,6 +1,8 @@
 const URL = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 
 export const getMeaning = async ({ search }) => {
+  if (!search) return {};
+
   const res = await fetch(`${URL}${encodeURIComponent(search)}`);
 
   if (res.ok) {

@@ -1,5 +1,3 @@
-"use client";
-
 import Mode from "components/Mode";
 import Input from "components/Input";
 import ErrorMessage from "components/ErrorMessage";
@@ -13,7 +11,7 @@ const Home = async ({ searchParams }) => {
       <section className="flex flex-col py-8 gap-4">
         <Input />
         {error && <ErrorMessage {...data} />}
-        {!error && <WordDefinition {...data[0]} />}
+        {!error && data?.length > 0 && <WordDefinition {...data[0]} />}
       </section>
     </Mode>
   );

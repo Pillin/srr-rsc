@@ -1,18 +1,17 @@
 import Mode from "components/Mode";
 import Input from "components/Input";
 import ErrorMessage from "components/ErrorMessage";
+import WordDefinition from "components/WordDefinition";
 import { getMeaning } from "services/Dictionary";
 
-const Home = async ({ params, searchParams }) => {
-  console.log({ searchParams });
+const Home = async ({ searchParams }) => {
   const { error, data } = await getMeaning({ ...searchParams });
-  console.log(data, error);
   return (
     <Mode>
       <section className="flex flex-col py-8 gap-4">
         <Input />
         {error && <ErrorMessage {...data} />}
-        {!error && <></>}
+        {!error && <WordDefinition {...data[0]} />}
       </section>
     </Mode>
   );

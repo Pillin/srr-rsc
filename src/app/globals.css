@@ -18,3 +18,30 @@
 
 body {
 }
+audio::-webkit-media-controls {
+  align-items: flex-end;
+}
+
+audio::-webkit-media-controls-enclosure {
+  width: min-content;
+  background: #a445ed;
+}
+
+audio::-webkit-media-controls-panel {
+  min-width: 25px;
+  width: 36px;
+  overflow: hidden;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-image: url("/images/icon-play.svg");
+  background-size: 60px;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-timeline,
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-volume-control-container {
+  display: none !important;
+}

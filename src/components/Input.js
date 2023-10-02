@@ -32,7 +32,7 @@ const Input = ({ initialValue }) => {
           onChange={onHandleChange}
           onKeyPress={onHandleKeyPress}
           value={input}
-          className={`bg-gray-200 dark:bg-gray-800 hover:border-purple-600 w-full rounded-lg h-16 p-6 pe-16 ${
+          className={`bg-gray-200 dark:bg-gray-800 dark:text-white hover:border-purple-600 w-full rounded-lg h-16 p-6 pe-16 ${
             error ? "border-red-500" : ""
           }`}
         />

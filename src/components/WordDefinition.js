@@ -15,7 +15,9 @@ const PartOfSpeech = ({ partOfSpeech, definitions, synonyms, antonyms }) => (
             {definition}
           </p>
           {example && (
-            <p className="text-gray-500 dark:text-gray-400 py-1">"{example}"</p>
+            <p className="text-gray-500 dark:text-gray-400 py-1">
+              &quot;{example}&quot;
+            </p>
           )}
         </li>
       ))}

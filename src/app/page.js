@@ -1,3 +1,5 @@
+"use client";
+
 import Mode from "components/Mode";
 import Input from "components/Input";
 import ErrorMessage from "components/ErrorMessage";

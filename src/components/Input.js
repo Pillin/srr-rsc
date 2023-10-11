@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 const ENTER_KEY = 13;
 
 const Input = ({ initialValue }) => {
-  console.log({ initialValue})
   const router = useRouter();
   const [input, setInput] = useState(initialValue);
   const [error, setError] = useState(input === "");

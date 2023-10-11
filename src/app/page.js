@@ -1,3 +1,5 @@
+'use server'
+
 import Mode from "components/Mode";
 import Input from "components/Input";
 import ErrorMessage from "components/ErrorMessage";
@@ -6,10 +8,11 @@ import { getMeaning } from "services/Dictionary";
 
 const Home = async ({ searchParams }) => {
   const { error, data } = await getMeaning({ ...searchParams });
+  
   return (
     <Mode>
       <section className="flex flex-col py-8 gap-4">
-        <Input />
+        <Input initialValue={searchParams.search} />
         {error && <ErrorMessage {...data} />}
         {!error && data?.length > 0 && <WordDefinition {...data[0]} />}
       </section>

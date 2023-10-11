@@ -1,3 +1,5 @@
+'use server'
+
 import Link from "next/link";
 import { getAudio, getPhonetic } from "utils/parse";
 
@@ -62,8 +64,7 @@ const WordDefinition = ({
           </p>
         </section>
         {audio && (
-          <audio height="75" controls controlsList="nodownload noplaybackrate">
-            <source src={audio} type="audio/mp3" />
+          <audio src={`${audio}?noCache=${Math.floor(Math.random() * 1000000)}`} height="75" controls controlsList="nodownload noplaybackrate">
             Your browser does not support the video tag.
           </audio>
         )}

@@ -26,7 +26,7 @@ const PartOfSpeech = ({ partOfSpeech, definitions, synonyms, antonyms }) => (
     </ul>
 
     {synonyms.length > 0 && (
-      <section className="flex gap-1">
+      <section className="flex gap-1 flex-wrap">
         <p className="pe-4 text-gray-500 dark:text-gray-400">Synonyms</p>
         {synonyms.map((elem, index, array) => (
           <section key={elem}>
